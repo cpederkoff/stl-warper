@@ -7,6 +7,8 @@ Created on Thu Nov 19 06:37:35 2013
 Reads a Binary file and
 Returns Header,Points,Normals,Vertex1,Vertex2,Vertex3
 
+Source: http://sukhbinder.wordpress.com/2013/11/28/binary-stl-file-reader-in-python-powered-by-numpy/
+
 """
 import numpy as np
 from struct import unpack
@@ -40,12 +42,9 @@ def BinarySTL(fname):
     return Header, Points, Normals, Vertex1, Vertex2, Vertex3
 
 
-def readStlVerticies(fname):
+def read_stl_verticies(fname):
     head, p, n, v1, v2, v3 = BinarySTL(fname)
     for i,j,k in zip(v1,v2,v3):
         yield [i,j,k]
 
-def readtardis():
-    fname = "Tardis.stl"  # "porsche.stl"
-    return readStlVerticies(fname)
-    
+
