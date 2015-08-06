@@ -8,10 +8,9 @@ if __name__ == '__main__':
     more_triangles = split_triangles(triangles,5)
     for triangle in more_triangles:
         triangle = list(triangle)
-
         for i in range(3):
+            #Edit to change how the STL is warped
             triangle[i] = push3d(triangle[i],[0,0,10],400)
-        for i in range(3):
             triangle[i] = top_wider(triangle[i],2)
         faces.append(triangle)
     with open('output.stl', 'wb') as fp:
