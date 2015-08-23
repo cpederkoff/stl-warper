@@ -4,6 +4,7 @@ Apply forces, push and pull verticies in an STL file.
 * Apply a force or formula on every vertex of a given mesh
 * Output back to STL
 * Command line interface
+
 ### How to use
 * Open warp_stl.py, and edit the line that says:
 ```
